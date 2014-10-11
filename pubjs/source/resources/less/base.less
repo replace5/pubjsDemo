@@ -1,0 +1,331 @@
+body {
+	font-family: @varFontBase;
+	font-size: @varFontSize;
+	line-height: @varLineHeight;
+	color: @varColorText;
+	background: @varBackgroundLoading;
+}
+
+ul li{
+	list-style: none;
+}
+
+label {
+	input {
+		margin: -3px 5px 0 10px;
+		vertical-align: -2px;
+	}
+}
+
+//全局内边距和外边距
+.pd10 {padding:10px !important;}
+.pb10 {padding-bottom:10px !important;}
+.pt10 {padding-top:10px !important;}
+.pl10 {padding-left:10px !important;}
+.pr10 {padding-right:10px !important;}
+
+.pd5 {padding:5px !important;}
+.pb5 {padding-bottom:5px !important;}
+.pt5 {padding-top:5px !important;}
+.pl5 {padding-left:5px !important;}
+.pr5 {padding-right:5px !important;}
+
+//上右下左距离为20px，例如模块间边距
+.ml20 {margin-left:20px !important;}
+.mr20 {margin-right:20px !important;}
+.mb20 {margin-bottom:20px !important;}
+.mt20 {margin-top:20px !important;}
+
+//上右下左距离为15px，例如按钮间边距
+.ml15 {margin-left:15px !important;}
+.mr15 {margin-right:15px !important;}
+.mb15 {margin-bottom:15px !important;}
+.mt15 {margin-top:15px !important;}
+
+//上右下左距离为5px，例如按钮间边距
+.ml10 {margin-left:10px !important;}
+.mr10 {margin-right:10px !important;}
+.mb10 {margin-bottom:10px !important;}
+.mt10 {margin-top:10px !important;}
+
+//上右下左距离为5px，例如按钮间边距
+.ml5 {margin-left:5px !important;}
+.mr5 {margin-right:5px !important;}
+.mb5 {margin-bottom:5px !important;}
+.mt5 {margin-top:5px !important;}
+
+//文字对齐
+.tc {text-align:center;} //居中
+.tl {text-align:left;}   //左对齐
+.tr {text-align:right;}  //右对齐
+
+// 行高
+.lh30 {line-height: 30px;}
+.lh24 {line-height: 24px;}
+
+//文字风格
+.ti {font-style: italic;}
+.tdef {font-style: italic; text-align: center; color: #ccc;}
+.text_limit {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+//浮动
+.fl {float:left;}
+.fr {float:right;}
+
+// 鼠标指针
+.cur_p {cursor: pointer;}
+.cur_d {cursor: default;}
+
+// 清除浮动
+.cl {clear:both;}
+.clear {
+	clear:both;
+	&:after {
+		content:".";
+		display:block;
+		clear:both;
+		visibility:hidden;
+		height:0;
+	}
+}
+.clearBox {
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	width: 0px;
+	clear: both;
+}
+.clearMargin:before {
+	display: table-column;
+	content: "";
+	height: 0;
+	width: 0;
+	overflow: hidden;
+}
+
+
+// 圆角边框
+.borderRadius (@radius: 3px) {
+	border-radius: @radius;
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+}
+
+// 一般按钮的box-shadow
+.shadowBox () {
+	box-shadow: ~"0 1px 3px rgba(0,0,0,.15), inset 0 1px 0 rgba(255,255,255,.5)";
+	-moz-box-shadow: ~"0 1px 3px rgba(0,0,0,.15), inset 0 1px 0 rgba(255,255,255,.5)";
+	-webkit-box-shadow: ~"0 1px 3px rgba(0,0,0,.15), inset 0 1px 0 rgba(255,255,255,.5)";
+}
+
+//input,select,textarea的box-shadow,简称"ist"...
+.shadowInset () {
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+	-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+// 透明度设置
+.opacity(@opacity) {
+	opacity: @opacity / 100;
+	filter: ~"alpha(opacity=@{opacity})";
+}
+
+// 不支持JavaScript提示
+.noscript {
+	top:50%;
+	left:50%;
+	width:600px;
+	height:100px;
+	font-size:16px;
+	background:#fc0;
+	position:absolute;
+	text-align:center;
+	line-height:100px;
+	margin:-50px 0 0 -300px;
+	box-shadow:rgba(0,0,0,.15) 0 1px 4px;
+	border-radius:5px;border:1px solid #DB7524;
+}
+
+// 加载数据中
+.appLoading {
+	.loadingBox {
+		top:50%;
+		left:50%;
+		width:120px;
+		height:120px;
+		position:absolute;
+		margin:-60px 0 0 -60px;
+	}
+	.background {
+		width:120px;
+		height:120px;
+		background:#333;
+		border-radius:5px;
+		.opacity(40);
+	}
+	.circle {
+		z-index:1;
+		color:#fff;
+		width:120px;
+		height:120px;
+		text-indent:.5em;
+		line-height:200px;
+		text-align:center;
+		position:absolute;
+		letter-spacing:.5em;
+		background:url(../images/app_loading.gif) 30px 15px no-repeat;
+	}
+}
+
+
+.draghand{
+	cursor: url(../images/hand.cur),pointer;
+}
+.loading {
+	background:url(../images/grid_loading.gif) 50% 50% no-repeat;
+}
+.lineThrough{
+	color:#808080;
+	cursor:default;
+	text-decoration: line-through;
+	&:hover {
+		color:#808080;
+		text-decoration: line-through;
+	}
+}
+// 说明框样式
+.description{
+	float: left;
+	color: #5F5F5F;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px dotted #aaa;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background-color: #FBF6DB;
+}
+
+
+// uikit补充样式
+.uk-dropdown-text {
+	display: inline-block;
+	padding-right: 12px;
+}
+.uk-tab > li > a {
+	cursor: default;
+}
+.uk-button:disabled {
+	cursor: default;
+}
+
+// 确认按钮
+.uk-button-confirm {
+	background-color: #2a4456;
+	color: #fff;
+	font-size: 13px;
+}
+.uk-button-confirm:hover,.uk-button-confirm:focus {
+	background-color: #2a526e;
+	color: #fff;
+	font-size: 13px;
+}
+.uk-button-confirm:active,.uk-button-confirm.uk-active {
+	background-color: #2a526e;
+	color: #fff;
+	font-size: 13px;
+}
+// 保存按钮
+.uk-button-save {
+	background-color: #0d8454;
+	color: #fff;
+	font-size: 13px;
+}
+.uk-button-save:hover,.uk-button-save:focus {
+	background-color: #0aaa6a;
+	color: #fff;
+	font-size: 13px;
+}
+.uk-button-save:active,.uk-button-save.uk-active {
+	background-color: #0aaa6a;
+	color: #fff;
+	font-size: 13px;
+}
+// 默认按钮
+.uk-button-def {
+	background-color: #eeeeee;
+	color: #444;
+	font-size: 13px;
+}
+.uk-button-def:hover,.uk-button-def:focus {
+	background-color: #f5f5f5;
+	color: #444;
+	font-size: 13px;
+}
+.uk-button-def:active,.uk-button-def.uk-active {
+	background-color: #f5f5f5;
+	color: #444;
+	font-size: 13px;
+}
+// 默认按钮带边框
+.uk-button-def-border {
+	line-height: 28px;
+	min-height: 28px;
+	border: 1px solid #e3e3e3;
+	background-color: #eeeeee;
+	color: #444;
+	font-size: 13px;
+}
+.uk-button-def-border:hover,.uk-button-def-border:focus {
+	background-color: #f5f5f5;
+	color: #444;
+	font-size: 13px;
+}
+.uk-button-def-border:active,.uk-button-def-border.uk-active {
+	background-color: #f5f5f5;
+	color: #444;
+	font-size: 13px;
+}
+
+// 功能库
+#lib {
+	// 线性渐变
+	.linear(@from:#fff,@to:#bbb){
+		background-color:@to;
+		background-repeat:no-repeat;
+		background-image:-webkit-linear-gradient(@from,@to);
+		background-image:-moz-linear-gradient(top,@from,@to);
+		background-image:-ms-linear-gradient(@from,@to);
+		background-image:-o-linear-gradient(@from,@to);
+		background-image:linear-gradient(@from,@to);
+		filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{from}', endColorstr='@{to}', GradientType=0)";
+	}
+
+	// 三角
+	.triangle(@size:5px,@arr:transparent transparent rgba(0, 0, 0, 0.6) transparent) {
+		height:0;
+		width:0;
+		overflow:hidden;
+		content:" ";
+		border-width:@size;
+		border-color:@arr;
+		border-style:solid;
+	}
+
+	// 透明度
+	.opacity(@opacity) {
+		opacity: @opacity / 100;
+		filter: ~"alpha(opacity=@{opacity})";
+	}
+
+	// css属性动画
+	.transition(@key:all,@delay:.3s,@type:ease-in-out) {
+		-moz-transition:@arguments;
+		transition:@arguments;
+	}
+}

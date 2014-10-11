@@ -1,0 +1,147 @@
+.M-dialog {
+	position:absolute;
+	top:120px;
+	left:50%;
+	min-width:300px;
+	_width:300px;
+	background:#fff;
+	box-shadow:rgba(0, 0, 0, 0.5) 0 0 10px;
+	display: none;
+
+	&Head{
+		position:relative;
+		padding:0;
+		height: 50px;
+		background-color: #f2f4f6;
+		font-size: 14px;
+	}
+	&Title {
+		color: #2a4456;
+		font-size:14px;
+		padding-left: 20px;
+		line-height: 50px;
+	}
+	&Close {
+		top:0;
+		right:0;
+		cursor:pointer;
+		overflow:hidden;
+		position:absolute;
+		width: 50px;
+		height: 50px;
+
+		.icon;
+		.icon-closeDialog;
+
+		&:hover {
+			background-color: #eee;
+		}
+	}
+	&Body {
+		color: #444;
+		min-height:120px;
+		_height:120px;
+		padding: 30px 20px;
+	}
+	&Foot {
+		padding: 15px 20px;
+		text-align:right;
+		background-color:#f2f4f6;
+		height: 30px;
+
+		input {
+			margin:0 0 0 10px;
+		}
+	}
+	&Mask {
+		position:absolute;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		background:#000;
+		z-index: 999;
+		#lib > .opacity(40);
+	}
+
+	// 系统弹出提示框样式
+	&Alert {
+		position: fixed;
+		top: 50%;
+		font-size: 14px;
+		min-width: 330px;
+		_width:330px;
+
+		.M-dialog {
+			&Body {
+				min-height:100px;
+				_height:100px;
+				line-height: 20px;
+			}
+		}
+	}
+
+	&Codecopy {
+		&Note {
+			margin-bottom: 0;
+		}
+		&Code {
+			margin-top: 10px;
+			width: 100%;
+			height: 18em !important;
+		}
+		&Copy {
+			margin: 10px auto 0;
+			min-width: 150px;
+			display: block;
+		}
+	}
+
+	&Notify {
+		position: absolute;
+		left: -500px;
+		top: -500px;
+		background: #AAA;
+		padding: 0 14px;
+		//border-radius: 2px;
+		color: #FFF;
+		box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+		cursor: pointer;
+
+		&.notify {
+			background-color: #b5e5fd;
+			color: #0e587d;
+			font-size: 13px;
+		}
+		&.success {
+			background-color: #a0e5a3;
+			color: #397d32;
+			font-size: 13px;
+		}
+		&.error {
+			background-color: #ffaea8;
+			color: #c43311;
+			font-size: 13px;
+		}
+		&.warn {
+			background-color: #fff497;
+			color: #a36a28;
+			font-size: 13px;
+		}
+
+		&Title {
+			font-size: 16px;
+			line-height: 30px;
+		}
+		&Icon {
+			display: none;
+		}
+		&Message {
+			font-size: 14px;
+			letter-spacing: 2px;
+			max-width: 400px;
+			height: 30px;
+			line-height: 30px;
+		}
+	}
+}

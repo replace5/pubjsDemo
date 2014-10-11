@@ -1,0 +1,55 @@
+.G-frameSide {
+	color: @varSideColorText;
+	a, em, input {
+		color : @varSideColorText;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+	&Search {
+		padding-left: @varPaddingNormal;
+		max-width: 100%;
+		margin-bottom: -5px;
+	}
+	&Menu {
+		margin-right: -@varSideCollapsedWidth;
+	}
+	&Scroller {
+		position: absolute;
+		overflow: hidden;
+		&Container {
+			padding-right: @varSideCollapsedWidth;
+		}
+		&Content {
+			padding-bottom: 30px;
+		}
+		div {
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: @varSideColorText;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+		&Hide {
+			display: none!important;
+		}
+	}
+	&Btn {
+		.borderBox;
+		display: block;
+		margin-left: @varPaddingNormal;
+		width: 120px;
+		height: 30px;
+		line-height: 30px;
+		cursor: pointer;
+		color: #476f9a;
+		text-align: left;
+		i {
+			margin-right: 7px;
+			font-size: 17px;
+			vertical-align: -7%;
+		}
+	}
+
+}

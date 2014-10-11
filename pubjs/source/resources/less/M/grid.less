@@ -1,0 +1,145 @@
+.M-grid {
+	&Refresh {
+		button {
+			padding: 0 7px;
+			min-height: 25px;
+			line-height: 25px;
+
+			em {
+				width:16px;
+				height:16px;
+				display:block;
+			}
+		}
+		.refNormal{
+			padding: 0 5px;
+			em {
+				background:url("../images/refresh.png") 0 0 no-repeat;
+			}
+		}
+		.refing em {
+			background:url("../images/loading.gif") 0 0 no-repeat;
+		}
+	}
+
+	&ExportCustom {
+		border-radius: 0;
+		background: #fff;
+
+		.M-tipContent {
+			overflow: visible;
+		}
+
+		.title {
+			font-size:14px;
+			font-weight:700;
+			padding:5px 0;
+
+			span {
+				font-weight:normal;
+				font-size:12px;
+				color:#83BFDF;
+				padding-left:20px;
+			}
+		}
+
+		.list {
+			margin:5px 0 20px 25px;
+		}
+
+		.bottom{
+			text-align: center;
+		}
+
+		ul {
+			display:block;
+			margin: 0;
+			padding: 0;
+
+			&.row_two li {
+				width:50%;
+			}
+			&.row_four li{
+				padding-right: 12px;
+			}
+
+			li {
+				display:block;
+				float:left;
+				line-height:25px;
+
+				&:hover {
+					background:#efefef;
+				}
+				&.disabled {
+					background:none;
+					color:#ccc;
+				}
+				label {
+					display:block;
+				}
+				input {
+					float:left;
+					margin:5px 8px 0;
+
+					&.size_input{
+						float:none;
+						width:50px;
+						margin:auto 4px;
+						padding:0 4px;
+					}
+				}
+
+				&.custom {
+					position:relative;
+					width:100%;
+
+					i {
+						padding:0 6px;
+						cursor:pointer;
+						margin-left:8px;
+					}
+					span {
+						display:block;
+						background:#ffffff url('../images/tick.png') no-repeat 30px center;
+						padding-left:50px;
+						white-space:nowrap;
+					}
+
+					.options {
+						width:100%;
+						position:absolute;
+						top:25px;
+						left:-1px;
+						background:#fff;
+						border:1px solid #ccc;
+						max-height: 200px;
+
+						li {
+							width:100%;
+							text-indent:1em;
+							cursor:pointer;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// 访问路径 -受访内容
+.page_visitRoute{
+	cursor: pointer;
+	display: inline-block;
+	.icon;
+	.icon-visitRoute;
+}
+// 热图 -受访内容
+.page_heatmap{
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: -16px;
+	margin-left: 10px;
+	.icon;
+	.icon-subgridHeatmap;
+}

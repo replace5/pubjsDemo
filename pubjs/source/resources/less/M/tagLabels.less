@@ -1,0 +1,173 @@
+.M-tagLabels {
+	&Wrapper{
+		font-size: 14px;
+		margin: 0 0 15px;
+		padding: 10px 0;
+		min-height: 1.35em;
+		background: #F8F8F8;
+		border-radius: 5px;
+		.M-tagLabelsSimpleContainer {
+			margin: 0px;
+		}
+	}
+	// 新增标签输入框
+	.M-commonInput{
+		input{
+			min-width: 300px;
+			padding: 3px;
+		}
+	}
+
+	position: relative;
+	input {
+		margin:0 0 10px;
+	}
+	p {
+		margin:0 0 5px;
+	}
+	.tips{
+		// margin-left: 267px;
+		position: absolute;
+		top: 29px;
+		left: 294px;
+		color:#aaa;
+	}
+	.spLabelTitle{
+		font-weight: bold;
+	}
+
+	.labelRow(){
+
+		span {
+			cursor:pointer;
+			// #lib > .nowwarp;
+			margin:0 5px 8px 0;
+			padding: 0 5px;
+			display:inline-block;
+			&:hover{
+				em{
+					color:#fff;
+				}
+				color:#fff;
+				background-color: #2FAEEB;
+			}
+		}
+
+		em {
+			font-weight:normal;
+			font-size:10px;
+			color:#BFBFBF;
+			margin:0 0 0 5px;
+		}
+	}
+
+	&Container, &SimpleContainer {
+		font-size:12px;
+		margin:0 0 15px;
+		padding:10px 20px;
+		min-height:1.35em;
+		background:#f8f8f8;
+		border-radius:5px;
+		.spLabelTitle{
+			font-weight: bold;
+			width: 60px;
+			text-align: right;
+			display: inline-block;
+		}
+		.wraper span{
+			margin-bottom: 5px;
+		}
+		.labelRow;
+		.M-tagLabelsloading {min-height:1.35em;}
+		.act {
+			color:#FFF;
+			background-color: #2FAEEB;
+			em{
+				color:#FFF;
+			}
+		}
+		.theLabelRow{
+			font-size: 12px;
+			padding: 8px 20px;
+			min-height: 1.35em;
+			background: #f8f8f8;
+			border-radius: 5px;
+			position: relative;
+		}
+	}
+	&loading{
+		background:url(images/loading.gif) 0 2px no-repeat;
+	}
+	&Label{
+		font-size: 14px;
+		width: 70px;
+		text-align: right;
+		margin-right: 10px;
+		display: inline-block;
+	}
+	&Inner {
+		padding:5px;
+		margin-left:72px;
+		span {
+			display: inline-block;
+			padding:2px 10px;
+			margin:2px 3px;
+			cursor:pointer;
+			background:#E7E7E7;
+			// #lib > .transition(background);
+			// #lib > .radius(3px);
+			em {display:none;}
+		}
+		.act {
+			color:#fff;
+			background:#50B9EB;
+		}
+	}
+	&MultiContainer {
+		font-size:14px;
+		margin:0 0 15px;
+		padding:10px 20px;
+		min-height:1.35em;
+		background:#f8f8f8;
+		border-radius:5px;
+
+		.theLabelRow {
+			margin:5px 0;
+			.labelRow;
+		}
+		.M-tagLabelsloading {min-height:1.35em;}
+		.act {
+			color:#50B9EB;
+		}
+	}
+	&ListTypeBox {
+		min-height:1.35em;
+		//margin:-1.35em 2em 0 3.5em;
+	}
+}
+.M-tagLabels-allowCollapse {
+	position:relative;
+	.wraper {
+		min-height:1.35em;
+		overflow:hidden;
+		margin:-1.35em 2em 0 5.5em;
+	}
+	.ctrlBnt {
+		right:12px;
+		top:12px;
+		display:none;
+		cursor:pointer;
+		position:absolute;
+		color:#1AA1E1;
+	}
+}
+.M-tagLabels-noCollapse {
+	div {
+		margin:-1.35em 0 0 3.5em;
+		min-height:1.35em;
+	}
+	.ctrlBnt {
+		display:none;
+		color:#1AA1E1;
+	}
+}

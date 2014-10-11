@@ -1,0 +1,286 @@
+.G-frame {
+	&Wrapper {
+		padding-top: @varHeadHeight;
+		background: @varColorWhite;
+	}
+	// 2种宽度自适应
+	&Head, &Body {
+		min-width: 1440px;
+	}
+
+	// 顶部内容
+	&Head {
+		color: @varColorHeadText;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: @varZIndexHeader;
+		width: 100%;
+		height: @varHeadHeight;
+		width: 100%;
+		background: @varHeadBackground;
+		// border-bottom: 1px solid #DBF0E0;
+
+		&Wrapper {
+		}
+
+		&Logo {
+			.fl;
+			height: @varHeadHeight;
+			overflow: hidden;
+			a {
+				display: block;
+				padding: 12px 10px 12px 15px;
+			}
+			img  {
+				width: 120px;
+			}
+		}
+
+		&Menu {
+			@varHeadMenuHeight: 30px;
+			.fl;
+			height: 30px;
+			margin: (@varHeadHeight - @varHeadMenuHeight)/2 0;
+			padding: 0;
+			li {
+				.fl;
+				margin-left: 20px;
+				a {
+					display: block;
+					padding: 0 10px;
+					height: @varHeadMenuHeight;
+					line-height: @varHeadMenuHeight;
+					font-size: @varFontSizeBig;
+					text-decoration: none;
+					cursor: pointer;
+					color: @varColorHeadText;
+					&:hover {
+						color: @varColorTextActive;
+					}
+				}
+				&.act a {
+					background: @varColorTextActive;
+					color: @varColorWhite;
+				}
+			}
+		}
+
+		&Language {
+			display: none;
+			.fr;
+			height: @varHeadHeight;
+			a {
+				.fl;
+				display: block;
+				width: 16px;
+				height: 11px;
+				margin: 13px 7px 0 0;
+			}
+			&CN {
+				background: url(../images/language/zh-cn.png) no-repeat;
+			}
+			&EN {
+				background: url(../images/language/en-us.png) no-repeat;
+			}
+		}
+
+		&Toolbar {
+			.fr;
+			height: @varHeadHeight;
+			line-height: @varHeadHeight;
+			padding-right: @varLayoutPadding;
+		}
+	}
+
+	&Body {
+		position: relative;
+		margin: 0;
+		height: 100%;
+		&Content {
+			width: 100%;
+			padding: @varContentPadding 0;
+		}
+		&Inner {
+			padding: 0 @varContentPadding 0 @varSideWidth + @varContentPadding;
+			height: 100%;
+			overflow: auto;
+		}
+	}
+
+	&SideWrapper {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: @varSideWidth;
+		background: @varSideBackground;
+		overflow: hidden;
+	}
+
+	&Side {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: @varFooterHeight;
+		padding-top: 20px;
+		overflow: hidden;
+		&Container {
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+		}
+		&CollapseBtn {
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 9;
+			width: @varSideCollapsedWidth;
+			height: 28px;
+			background: @varSideColorText;
+			-webkit-border-radius: 0 0 0 1px;
+			-moz-border-radius: 0 0 0 1px;
+			border-radius: 0 0 0 1px;
+			i {
+				@varArrowSize: 6px;
+				width: 0;
+				height: 0;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				margin-top: -@varArrowSize;
+				overflow: hidden;
+				border: @varArrowSize solid transparent;
+			}
+			.arrow-left {
+				margin-left: -5px;
+				border-right-color: @varSideBackground;
+			}
+			.arrow-right {
+				margin-left: 2px;
+				border-left-color: @varSideBackground;
+			}
+			&:hover {
+				background: @varColorTextActive;
+				.arrow-left {
+					border-right-color: @varColorWhite;
+				}
+				.arrow-right {
+					border-left-color: @varColorWhite;
+				}
+			}
+		}
+	}
+
+	&SideCollapsed-hide {
+		display: none !important;
+	}
+
+	&SideCollapsed &BodyInner {
+		padding-left: @varSideCollapsedWidth + @varContentPadding;
+	}
+	&SideCollapsed &SideWrapper {
+		width: @varSideCollapsedWidth;
+	}
+
+	&BodyNoSide &BodyInner {
+		padding: 0;
+	}
+	&BodyNoSide &BodyContent {
+		padding: 0;
+	}
+	&BodyNoSide &SideWrapper {
+		display: none;
+	}
+
+	&Footer {
+		height: @varFooterHeight;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #2f383e;
+		color: @varSideColorText;
+		line-height: @varFooterHeight;
+		text-align: left;
+		text-indent: @varPaddingNormal;
+	}
+
+	&UserToolbar {
+		position:relative;
+		&Box{
+			position:relative;
+			cursor:pointer;
+			min-width: 145px;
+			_width: 145px;
+			padding: 0 10px;
+			&.act {
+				background: @varHeadBackgroundActive;
+			}
+		}
+		&Name {
+			font-size: 1.2em;
+			line-height: 20px;
+			padding: 0 5px;
+		}
+		&List {
+			margin: 0;
+			padding: 0;
+			display: none;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			z-index: 999;
+			min-width: 180px;
+			width: 100%;
+			padding: @varPaddingNormal 0 !important;
+			background:#F5F5F5;
+			li {
+				width: 100%;
+				a {
+					display: block;
+					height: 30px;
+					line-height: 30px;
+					padding: 0 @varPaddingNormal;
+					&:hover, &:active{
+						text-decoration: none;
+						background: #00a8e6;
+						color: #fff;
+						box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+						text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+					}
+				}
+
+			}
+
+		}
+	}
+}
+
+// ICON图标预加载类
+#SCENES_PRELOADER {
+	position:absolute;
+	top:-1000px;
+	overflow: hidden;
+	height: 10px;
+
+	b {
+		.icon();
+	}
+	a {
+		.icon-act();
+	}
+	//em {
+	//	background-image:url(../images/icons_disable.png);
+	//}
+	//i {
+	//	background-image:url(../images/icons_row.png);
+	//}
+}
+
+.G-frameScenes {
+	display: none;
+}

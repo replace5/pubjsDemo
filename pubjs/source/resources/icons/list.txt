@@ -1,0 +1,95 @@
+# 靠右定位
+#	r,<top>,<左边距>,<右边距>[<截取宽度>,<截取高度>,<截点X>,<截点Y>]
+# 靠底定位
+#	b,<left>,<顶边距>,<下边距>[<截取宽度>,<截取高度>,<截点X>,<截点Y>]
+# 栅格定位
+#	g,<col>,<row>,<格大小>[<截取宽度>,<截取高度>,<截点X>,<截点Y>]
+# 绝对坐标定位
+#	a,<X>,<Y>[<截取宽度>,<截取高度>,<截点X>,<截点Y>]
+# 自动排列
+#	z,<>,<>[<截取宽度>,<截取高度>,<截点X>,<截点Y>]
+# 复制上一个定义
+#	d
+# 复制空项目
+#	t
+#
+# [组文件名]
+# <格式字符串>  (修饰名)  {CSS命名!wh}  文件名
+#
+# 特殊文件名
+# @null  空文件
+
+# 图标首格留空
+a,0,0[64,64]	@null
+
+z[32,32,0,0]		{sitelistBack}		SitelistBack.png
+z[32,32,0,0] (act)	{sitelistBack}		SitelistBack_act.png
+
+z[16,16,0,0]		{visitRoute}		visitRoute.png
+
+
+
+# 搜索放大镜
+z[20,20,4,0]		{searchButton}		icons_row.png
+
+# 删除小圆形按钮
+z[20,20,0,-2]				{funDel}	del.png
+z[20,20,0,-2]	(act)		{funDel}	del_act.png
+
+# 下拉框拖拉功能图标
+z[10,10,0,0]		{drag} 				drag.png
+
+# 小问号
+z[15,15,62,22]				{questionMark} 		icon.png		# 问号图标
+z[15,15,62,22]		(act)	{questionMark} 		icons_act.png	# 问号图标
+
+# 表格展开箭头
+z[16,10,0,80]				{middleArrow}		icon.png		# 中型白色 向下箭头
+z[16,16,20,80]				{upGrayArrow}		icon.png		# 向上灰色箭头
+
+
+# subgrid
+# 受访内容、进入页面、访问质量、关键词、搜索引擎、来源列表、来源页面、受访页面、城市、行为统计、广告、地理特征、访问设备
+z[16,16,0,0]			{subgridPage}			subgridPage.png
+z[16,16,0,0]	(act)	{subgridPage}			subgridPage_act.png
+z[16,16,0,0]			{subgridPage_landing}	subgridPage_landing.png
+z[16,16,0,0]	(act)	{subgridPage_landing}	subgridPage_landing_act.png
+z[16,16,0,0]			{subgridLoyalty}		subgridLoyalty.png
+z[16,16,0,0]	(act)	{subgridLoyalty}		subgridLoyalty_act.png
+z[16,16,0,0]			{subgridKeyWord}		subgridKeyWord.png
+z[16,16,0,0]	(act)	{subgridKeyWord}		subgridKeyWord_act.png
+z[16,16,0,0]			{subgridSe}				subgridSe.png
+z[16,16,0,0]	(act)	{subgridSe}				subgridSe_act.png
+z[16,16,0,0]			{subgridReferer}		subgridReferer.png
+z[16,16,0,0]	(act)	{subgridReferer}		subgridReferer_act.png
+z[16,16,0,0]			{subgridReferer_url}	subgridReferer_url.png
+z[16,16,0,0]	(act)	{subgridReferer_url}	subgridReferer_url_act.png
+z[16,16,0,0]			{subgridPage_url}		subgridPage_url.png
+z[16,16,0,0]	(act)	{subgridPage_url}		subgridPage_url_act.png
+z[16,16,0,0]			{subgridCity}			subgridCity.png
+z[16,16,0,0]	(act)	{subgridCity}			subgridCity_act.png
+z[16,16,0,0]			{subgridCustoms}		subgridCustoms.png
+z[16,16,0,0]	(act)	{subgridCustoms}		subgridCustoms_act.png
+z[16,16,0,0]			{subgridUtm_spot}		subgridUtm_spot.png
+z[16,16,0,0]	(act)	{subgridUtm_spot}		subgridUtm_spot_act.png
+z[16,16,0,0]			{subgridGeo}			subgridGeo.png
+z[16,16,0,0]	(act)	{subgridGeo}			subgridGeo_act.png
+z[16,16,0,0]			{subgridClient}			subgridClient.png
+z[16,16,0,0]	(act)	{subgridClient}			subgridClient_act.png
+z[16,16,0,0]			{subgridDayCompare}		subgridDayCompare.png
+z[16,16,0,0]	(act)	{subgridDayCompare}		subgridDayCompare_act.png
+z[16,16,0,0]			{subgridHeatmap}		subgridHeatmap.png
+z[16,16,0,0]	(act)	{subgridHeatmap}		subgridHeatmap_act.png
+
+# 按钮
+z[10,10,0,0]			{btnClose}			btnClose.png
+z[10,10,0,0]	(act)	{btnClose}			btnClose_act.png
+
+# 操作图标
+z[14,14,0,0]			{operateMenu}		operateMenu.png
+
+#新版按钮
+z[50,50,0,0]			{closeDialog}		close_dialog.png
+
+# 搜索图标
+z[16,16,0,0]			{iconSearch}		iconSearch.png

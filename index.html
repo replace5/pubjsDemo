@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <script type="text/javascript">
+    (function(){
+      var W=window;
+      var L=location.href.split('/').slice(0,3);
+      L.push('frontend/'); // 正式发布环境需要加入资源存放目录
+      var V='201409281117';
+      if (V.charAt(0)=='{'){V='';}else{W.VERSION=V;}
+      var I = (W.APP_THEME && W.APP_THEME.icon || 'fav.ico');
+      var H = [
+        '<base href="{B}" />',
+        '<link type="text/css" charset="utf-8" rel="stylesheet" href="{B}resources/css/app_v3.css?'+V+'">',
+        '<link rel="icon" href="{B}'+I+'" mce_href="{B}'+I+'" type="image/x-icon">',
+        '<link rel="shortcut icon" href="{B}'+I+'" mce_href="{B}'+I+'" type="image/x-icon">',
+        '<script type="text/javascript" src="{B}pubjs/source/libs/seajs/2.0.0/sea.js"></'+'script>',
+        '<script type="text/javascript" src="{B}data/init.js?'+V+'"></'+'script>'
+      ].join('').replace(/\{B\}/g, L.join('/'));
+      document.write(H);
+    })();
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>加载中..</title>
+  </head>
+  <body class="appLoading">
+    <noscript class="noscript">本系统需要javascript的支持。请先启用浏览器javascript再刷新页面。</noscript>
+    <div class="loadingBox">
+      <div class="circle">加载中</div>
+      <div class="background"></div>
+    </div>
+  </body>
+</html>

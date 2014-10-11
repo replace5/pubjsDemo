@@ -1,0 +1,121 @@
+// baes.less 统一全站字体，链接，导航，列表，下拉，表格的颜色大小等。
+// -----------------------------------------------------
+@varImageBase:	".";
+
+// 全局字体
+// -------------------------
+@varFontSans:             "Microsoft YaHei",Arial, Helvetica, sans-serif;
+@varFontBase:             @varFontSans;
+@varFontSize:             12px;
+@varLineHeight:           18px;
+@varFontWeight:           bold;
+
+@varLayoutPadding:        15px;
+
+// 基础颜色
+// -------------------------
+@varColorBlack:           #0D0D0D;
+@varColorGrayDarker:      #515D68;
+@varColorGrayDark:        #555;
+@varColorGray:            #808080;
+@varColorGrayLight:       #B7B6B6;
+@varColorGrayLighter:     #EAEAEA;
+@varColorGrayLightest:    #F8F8F8;
+@varColorWhite:           #FFF;
+@varColorBlue:            #33B5E5;
+@varColorBlueLight:       #D9EFF7;
+@varColorBlueLighter:     #F2FCFF;
+@varColorBlueLink:        #498FCA;
+@varColorBlueLinkHover:   #3399FF;
+@varColorRed:             #EF3248;
+@varColorpink:            #FF005F;
+@varColorgreen:           #5BB601;
+@varColorgreenLight:      #0EC900;
+
+@varColorChannelActive:   #307FA4;
+@varColorChannelHover:    #4FAEDB;
+
+@varColorViolet:          #B19CC3;
+@varColorVioletHover:     #8F5B7F;
+@varColorVioletActive:    #8F5B7F;
+
+// body和文字的颜色
+// -------------------------
+@varBackgroundBody:       #fff;
+@varBackgroundBodyTitle:  #f2f2f2;
+@varBackgroundLoading:    #162327;
+@varColorText:            @varColorGrayDark;
+@varBackground:           #162327;
+
+@varHeadHeight:           50px;
+
+// 链接
+// -------------------------
+@varColorLink:            @varColorBlueLink;
+@varColorLinkHover:       @varColorBlueLinkHover;
+
+
+// 表格
+// -------------------------
+@tableBackground:                   @varColorWhite;
+@tableBackgroundAccent:             @varColorGrayLightest;
+@tableBackgroundHover:              #EFFBFE;
+@tableBorder:                       #C8CCCD;
+@tdBorder:                          @varColorGrayLighter;  //表格td边框颜色
+@tableGradientStart:                #F7F7F7;       //表头渐变开始颜色
+@tableGradientEnd:                  #EFEFEF;       //表头渐变结束颜色
+
+
+// 下拉列表
+// -------------------------
+@dropdownBackground:              @varColorWhite;
+@dropdownBorder:                  rgba(0,0,0,.2);
+@dropdownLinkColor:               @varColorGrayDark;
+@dropdownLinkColorHover:          @varColorWhite;
+@dropdownLinkBackgroundHover:     @varColorLink;
+@dropdownDividerTop:              #e5e5e5;
+@dropdownDividerBottom:           @varColorWhite;
+
+
+// Z-index列表
+// -------------------------
+@varZIndexHeader:	100;
+@varZIndexBody:		99;
+
+
+@zindexDropdown:                  1000;
+@zindexPopover:                   1010;
+@zindexTooltip:                   1020;
+@zindexFixedNavbar:               1030;
+@zindexModalBackdrop:             1040;
+@zindexModal:                     1050;
+
+// 表单占位符的颜色
+// -------------------------
+@placeholderText:                 @varColorGrayLight;
+
+
+// hr边框颜色
+// -------------------------
+@hrBorder:                        @varColorGrayLighter;
+
+
+// 导航栏
+// -------------------------
+@navbarHeight:                    40px;
+@navbarBackground:                @varColorGrayDarker;
+@navbarBackgroundHighlight:       @varColorGrayDark;
+
+@navbarText:                      @varColorGrayLight;
+@navbarLinkColor:                 @varColorGrayLight;
+@navbarLinkColorHover:            @varColorWhite;
+@navbarLinkColorActive:           @navbarLinkColorHover;
+@navbarLinkBackgroundHover:       transparent;
+@navbarLinkBackgroundActive:      @navbarBackground;
+
+@navbarSearchBackground:          lighten(@navbarBackground, 25%);
+@navbarSearchBackgroundFocus:     @varColorWhite;
+@navbarSearchBorder:              darken(@navbarSearchBackground, 30%);
+@navbarSearchPlaceholderColor:    #ccc;
+@navbarBrandColor:                @navbarLinkColor;
+

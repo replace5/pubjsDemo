@@ -1,0 +1,24 @@
+.M-tab {
+	&Body {
+		background: white;
+	}
+
+	&Body, &ButtonBody{
+		> div {
+			display: none;
+			padding: 10px 0;
+			position: relative;
+			min-height: 60px;
+
+			&.uk-active {
+				display: block;
+			}
+		}
+	}
+	&Setting{
+		right: 0;
+		z-index: 2;
+		position: absolute;
+		margin-top: -45px;
+	}
+}

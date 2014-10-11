@@ -1,0 +1,111 @@
+.M-autoComplete {
+	@domWidth: 200px;
+	@menuBgColor: #15b374;
+	@itemColorText: #172128;
+	@itemHightlightColorText: #fff;
+	@itemHoverBgcolor: #0d915c;
+	@itemHeight: 30px;
+	@paddingNormal: 15px;
+	position: relative;
+	padding-bottom: 20px;
+	width: @domWidth;
+	input {
+		.borderBox;
+		width: @domWidth - 2;
+		height: 30px;
+		background: transparent;
+		border: 1px solid #49525d;
+		outline: none;
+		padding: 5px 40px 5px 5px;
+		&:focus {
+			border-color: #15b374;
+		}
+	}
+	&-menu {
+		max-height: @itemHeight * 5;
+		*height: @itemHeight * 5;
+		padding: @paddingNormal;
+		background: @menuBgColor;
+		&Wrap {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 100%;
+			z-index: 101;
+			&-arrow {
+				position: absolute;
+				left: 50%;
+				bottom: 100%;
+				margin-left: -4px;
+				width: 0px;
+				height: 0px;
+				overflow: hidden;
+				border: 8px solid transparent;
+				border-bottom-color: @menuBgColor;
+			}
+		}
+		&Content {
+			margin: 0 -@paddingNormal;
+			padding: 0;
+			a {
+				display: block;
+				height: @itemHeight;
+				line-height: @itemHeight;
+				color: @itemColorText;
+				padding: 0 @paddingNormal;
+				&:hover, &:active {
+					background: @itemHoverBgcolor;
+				}
+			}
+		}
+	}
+	&-placeholder {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		display: inline-block;
+		width: 36px;
+		padding-left: 20px;
+		margin-left: -35px;
+		height: 30px;
+		line-height: 30px;
+		pointer-events: none;
+		i {
+			position: absolute;
+			top: 8px;
+			left: 0;
+			display: inline-block;
+			.icon;
+			.icon-iconSearch;
+		}
+	}
+	&-close {
+		position: absolute;
+		top: 7px;
+		right: 15px;
+		z-index: 100;
+		text-align: center;
+		background: #777;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		width: 16px;
+		height: 16px;
+		color:#fff;
+		font-size: 12px;
+		cursor: pointer;
+	}
+	li &-text {
+		color: @itemColorText;
+		&:hover {
+			color: @itemColorText;
+			text-decoration: none;
+		}
+
+	}
+	li &-matchText,
+	li &-text:hover &-matchText {
+		color: @itemHightlightColorText;
+
+	}
+}

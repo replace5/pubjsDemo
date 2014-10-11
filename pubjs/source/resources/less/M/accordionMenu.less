@@ -1,0 +1,60 @@
+.M-accordionMenu {
+	@hoverColor: #15b374;
+	font-size: 13px;
+	font-family: arial, sans-serif;
+	min-width: 200px;
+	.animate(@time: 0.3s) {
+		-webkit-transition: all @time linear;
+		-moz-transition: all @time linear;
+		-o-transition: all @time linear;
+		transition: all @time linear;
+	}
+	&-ul {
+		padding: 0 0 0 25px;
+		margin: 0;
+	}
+	&-item {
+		position: relative;
+	}
+	&-item a:hover {
+		color: #fff;
+	}
+	&-head-con {
+		position: relative;
+	}
+	&-head {
+		display: block;
+		margin-left: -18px;
+		padding: 8px 0 8px 10px;
+		.animate;
+	}
+	&-head &-html {
+		margin-left: 10px;
+		padding-left: 5px;
+		text-indent: -5px;
+		word-wrap: break-word;
+		max-width: 100%;
+		overflow: hidden;
+		-ms-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		cursor: pointer;
+	}
+	&-hassub > &-head-con:hover {
+		background: #202c33;
+	}
+	&-icon {
+		font-size: 18px;
+		line-height: 35px;
+		position: absolute;
+		top: 0;
+		right: 100%;
+	}
+	&-current a, &-current a:hover{
+		color: @hoverColor;
+	}
+	&-current-parent > &-head-con a {
+		font-weight: bold;
+		color: #fff;
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"server": {
+		"port": 99
+	},
+
+	"tagKong": {
+		"alias": ["tagKong.dev"],
+		"local": {
+			"/": "../index.html",
+			"/frontend/": "../",
+			"/pubjs/": "../pubjs/source"
+,			"/data/fack.html": "../data/fack.html"
+		},
+		"replace": {
+			"/sitevs":{
+				"file": "{root}index.html",
+				"callback": function(local, remote){
+					var line = /<head>(<script.+)/.exec(remote);
+					line = (line?line[1]:'') + '<script>var APP_DEBUG=2;</script>';
+					return local.replace('<head>', '<head>'+line);
+				}
+			}
+		},
+		"host": "192.168.10.213",
+		"port": 99
+	}
+}

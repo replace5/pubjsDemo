@@ -1,0 +1,61 @@
+.P-user {
+	@varItemWidth: 320px;
+	&LoginForm {
+		display: block;
+		padding: 50px 100px 0;
+
+		label {
+			color: #fff;
+		}
+
+		&Logo {
+			width: @varItemWidth;
+			height: 140px;
+			line-height: 140px;
+			text-align: center;
+			overflow: hidden;
+			vertical-align: middle;
+		}
+
+		&Title {
+			display: none;
+			margin: 0 0 5px;
+			font-size: 16px;
+		}
+		&Input {
+			width: @varItemWidth;
+			font-size: 16px;
+			padding: 8px 6px;
+			border: 1px solid #AAA;
+		}
+		&Invalid {
+			border-color: #DC8D99!important;
+			background: #FFF7F8!important;
+		}
+		&Error {
+			display: block;
+			color: #C83100;
+			line-height: 25px;
+			height: 30px;
+		}
+		&Option {
+			padding: 10px 0 10px;
+		}
+		&ButtonBar {
+			padding: 20px 0;
+			text-align: center;
+			button {
+				width: @varItemWidth;
+				height: 40px;
+				border-radius: 3px;
+			}
+		}
+	}
+	&LoginPassword {
+		width: @varItemWidth;
+		margin: 200px auto 0;
+		padding: 20px 50px;
+		background:#fff;
+		font-size: 14px;
+	}
+}

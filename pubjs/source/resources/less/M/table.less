@@ -1,0 +1,525 @@
+.M-table {
+	&CustomColumn {
+		border-radius: 0;
+		background: #fff;
+
+		label input {
+			margin-right: 5px;
+		}
+
+		td {
+			line-height: 16px;
+			vertical-align: top;
+			white-space: nowrap;
+			padding: 0 15px 10px;
+
+			strong {
+				display: block;
+				font-weight: 400;
+				color: #0E0E0E;
+				padding: 0 0 8px 0;
+			}
+			label {
+				color: #646464;
+				display: block;
+				margin: 0 0 0 14px;
+				padding: 3px 0
+			}
+		}
+
+		&Footer {
+			clear: both;
+			border-top: 1px #AAA solid;
+			margin: 0 -5px -5px;
+			padding: 10px 5px 0;
+
+			.checkboxCon {
+				margin-right: 120px;
+			}
+
+			button + button {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	&Tab {
+		float: left;
+		height: 29px;
+		background: #F6F6F6;
+		border: 1px solid #CACDCC;
+		border-bottom: none;
+		padding: 0;
+		margin: 0;
+
+		&Item {
+			list-style: none;
+			float: left;
+			display: inline;
+			padding: 0 15px;
+			height: 29px;
+			line-height: 29px;
+			color: #0D0D0D;
+			cursor: pointer;
+
+			i {
+				padding: 0 7px;
+				margin-right: -10px;
+				cursor: pointer;
+			}
+		}
+
+		&Custom {
+			padding-right: 10px;
+			position: relative;
+			> span {
+				padding: 0 8px;
+				cursor: pointer;
+			}
+		}
+
+		&Active {
+			background: #848484;
+			border: 1px solid #848484;
+			height: 30px;
+			border-bottom: none;
+			margin: -1px -1px -3px;
+			cursor: default;
+			color: white;
+
+			> span {
+				.icon-act;
+			}
+		}
+	}
+
+	&Amount {
+		clear: both;
+		border-left: 1px solid #C9CCCB;
+		border-right: 1px solid #C9CCCB;
+		border-top: 3px solid #848484;
+		overflow: hidden;
+		color: #545454;
+		background: white;
+		background: -webkit-gradient(linear, 0 41%, 100% 0, from(white), to(#F7F7F7));
+		background: -webkit-linear-gradient(top, white, #F7F7F7);
+		background: -moz-linear-gradient(top, white, #F7F7F7);
+		background: -ms-linear-gradient(top, white, #F7F7F7);
+		background: -o-linear-gradient(top, white, #F7F7F7);
+		background: linear-gradient(top, white, #F7F7F7);
+		filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#f7f7f7', GradientType=0)";
+		-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#f7f7f7', GradientType=0)";
+
+		ul {
+			padding: 0;
+			margin: 0;
+		}
+
+		li {
+			position: relative;
+			float: left;
+			display: block;
+			text-align: center;
+			font-size: 16px;
+			/*font-weight: bold;*/
+			padding: 10px;
+			height: 40px;
+			border-left: 1px solid #C9CCCB;
+
+			&.first {
+				border-left: none;
+			}
+
+			span {
+				/*font-weight: normal;*/
+				font-size: 12px;
+				display: block;
+				color: #A3A3A3;
+				margin: 0 0 4px;
+				text-align: center;
+			}
+
+			em {
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				.icon;
+				.icon-questionMark;
+			}
+			em:hover {
+				.icon-act;
+			}
+
+			p {
+				left:0;
+				bottom:0;
+				height:0;
+				width:100%;
+				overflow:hidden;
+				position:absolute;
+				background:#2faeeb;
+				#lib > .transition(height);
+			}
+		}
+
+		.allowClick {
+			li {
+				cursor:pointer;
+			}
+		}
+
+		.itemAct {
+			cursor:default;
+			p {
+				height:3px;
+				#lib > .opacity(100);
+			}
+		}
+	}
+
+	&SubGridCtr {
+		top: -6px;
+		z-index:10;
+		left: -10px;
+		height: 26px;
+		padding: 2px 6px 0 6px;
+		background: #fff;
+		position: absolute;
+		border-radius: 12px;
+		a {
+			display: inline-block;
+			.icon;
+			width:16px;
+			height:16px;
+			margin:4px;
+			&.act, &:hover {
+				.icon-act;
+			}
+		}
+	}
+
+	&List {
+		overflow: hidden;
+		border: 1px solid #C8CCCD;
+		background: #fff;
+		clear: both;
+		font-size: 13px;
+
+		&.disabled {
+			#lib > .opacity(50);
+		}
+
+		table {
+			border-spacing: 0;
+			border: none;
+			min-width: 100%;
+		}
+
+		// 列表头样式
+		thead {
+			tr {
+				background: #EFEFEF;
+				background: -webkit-gradient(linear,0% 0,0% 100%,from(#F7F7F7),to(#EFEFEF));
+				background: -moz-linear-gradient(top,#F7F7F7,#EFEFEF 100%);
+			}
+			th {
+				cursor: default;
+				padding: 8px 0;
+				border: none;
+				line-height: 15px;
+				font-size: 12px;
+				font-weight: normal;
+				color: #333;
+				white-space: nowrap;
+				border-bottom: 1px solid #C8CCCD;
+				text-align: center;
+
+				span {
+					padding: 0 4px;
+				}
+			}
+		}
+
+		// 表头排序鼠标效果
+		&Head {
+			&Hover {
+				background:rgba(255,255,255,.5);
+			}
+			&Down {
+				background:#f1f0f0;
+				box-shadow:0 2px 5px rgba(0,0,0,0.2) inset;
+			}
+			&Sort {
+				cursor: pointer !important;
+
+				em {
+					background:url(../images/updown.png) left 50px no-repeat;
+				}
+
+				&.asc em{
+					padding: 0 5px;
+					background-position: left 7px;
+				}
+				&.desc em{
+					padding: 0 5px;
+					background-position: left -29px;
+				}
+			}
+		}
+
+		// 列表内容样式
+		tbody {
+			tr.alt {
+				background: #F8F8F8;
+			}
+			> tr:hover {
+				background: #EFFBFE;
+			}
+			td {
+				border: none;
+				text-align:right;
+				white-space: nowrap;
+				border: solid #EAEAEA;
+				border-width: 0 1px 1px 0;
+				line-height: 23px;
+				padding: 5px;
+
+				// 修正图片占位错误
+				img {
+					max-width: initial;
+				}
+			}
+
+			.center {
+				text-align:center;
+			}
+
+			.left {
+				text-align:left;
+			}
+
+		}
+
+		// 二级表格图标所在单元格样式
+		&Sub {
+			padding: 0 22px 0 0;
+			position: relative;
+			// line-height: 16px;
+
+			// 两列操作两列配置
+			&Row2 {
+				.M-tableListContent {
+					min-height: 32px;
+					line-height: 32px;
+				}
+				.M-tableListFunctional {
+					margin-top: -24px;
+				}
+				.M-tableListSubCtr {
+					margin-top: 0px;
+				}
+			}
+		}
+		// &Content{
+		// 	width: 210px;
+		// 	overflow: hidden;
+		// }
+		// 操作列容器
+		&Functional ,&OtherFunc {
+			top:-13px;
+			left:-6px;
+			width:20px;
+			// right:-2px;
+			overflow:hidden;
+			position:absolute;
+			padding: 3px 2px 1px 7px;
+			#lib > .transition(width,.2s);
+			a {
+				display:inline-block;
+			}
+			&Anchor {
+				position:relative;
+			}
+			.spacing {
+				width:10px;
+				display:inline-block;
+			}
+		}
+
+		// 操作菜单
+		&Menu{
+			.icon;
+			.icon-operateMenu;
+			cursor: pointer;
+			display: inline-block;
+		}
+
+		.functionalHover {
+			.M-tableListFunctional ,.M-tableListOtherFunc{
+				z-index:12;
+				// width:inherit;
+				background:#fff;
+				border-radius:12px;
+			}
+		};
+
+		// 二级表格固定图标容器
+		&SubCtr {
+			position: absolute;
+			margin-top: -10px;
+			height: 20px;
+			right: -3px;
+			top: 50%;
+
+			> div {
+				position: relative;
+				height:16px;
+				width:16px;
+				right: 4px;
+				top: 2px;
+				.icon;
+
+				&.act {
+					.icon-act;
+				}
+			}
+		}
+
+		//修正操作弹出框的位置
+		&SubOperate{
+			.M-tableListFunctional{
+				right: -4px;
+				padding: 2px 0px;
+				background-color: transparent;
+			}
+		}
+		// 二级表格行容器
+		&SubGrid {
+			> td {
+				position: relative;
+				background: url(../images/grid_bg.gif) repeat-x #F3F3F3;
+				padding: 21px 0px 0 !important;
+				border-width: 0 !important;
+			}
+			div.con {
+				padding: 0 10px;
+				position: relative;
+				text-align: left;
+
+				em.arrow {
+					display: block;
+					position: absolute;
+					top: -22px;
+					left: 50px;
+					.icon;
+					.icon-middleArrow;
+				}
+				em.collapse {
+					display: none;
+					position: absolute;
+					top: -5px;
+					right: 50px;
+					font-weight: 600;
+					cursor: pointer;
+				}
+				&.show_collapse {
+					padding-top: 20px;
+
+					.collapse {
+						display: block;
+					}
+				}
+			}
+			div.bg {
+				background: url(../images/grid_bg_bottom.gif) 0 100% repeat-x #F3F3F3;
+				height: 10px;
+			}
+			// TAB分页修正
+			.M-tabBody {
+				padding: 0 10px;
+				margin: 0 -10px;
+			}
+		}
+
+		// 行点击样式
+		&Clickable {
+			cursor: pointer;
+
+			td[data-ctype] {
+				cursor: default;
+			}
+		}
+
+		// 没有数据提示
+		&Empty {
+			td {
+				background: #fff;
+				text-align: center!important;
+				padding: 30px 0 !important;
+			}
+		}
+		// 加载提示
+		&Loading {
+			position: absolute;
+			z-index: 100;
+			left: 0px;
+			top: 0px;
+			text-align: center;
+			text-indent: -9999em;
+			background: #ccc url('../images/grid_loading.gif') 50% 50% no-repeat;
+			#lib > .opacity(40);
+		}
+		&WidthLimit {
+			overflow:hidden;
+			white-space:nowrap;
+			text-overflow:ellipsis;
+			display: block;
+		}
+		&RowHighlight {
+			color:#00AC3E;
+			font-weight:bold;
+		}
+		&HighlightRow {
+			font-weight:bold;
+			background:#EDFBFF!important;
+		}
+
+		.M-formValueEditor{
+			margin: -5px;
+			.label {
+				padding: 0 5px;
+			}
+			.inputLock {
+				left: 0;
+			}
+			.countInput {
+				width: 25px;
+				padding: 0 3px;
+			}
+		}
+
+		&Mark {
+			border-left:solid #2faeeb 3px!important;
+			&Act {
+				background-color:#2faeeb;
+			}
+		}
+
+		&CellFn {
+			cursor:pointer!important;
+			background:transparent none center no-repeat;
+			&Act {
+				background:#2faeeb url("../images/td_trend.png") center no-repeat;
+				span {
+					#lib > .opacity(0);
+				}
+			}
+		}
+	}
+
+	&Batch {
+		float:right;
+		margin:0 5px;
+		position:relative;
+	}
+}
